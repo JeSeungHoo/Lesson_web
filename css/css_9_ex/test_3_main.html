@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        body{
+            text-align: left;
+            color: #fff;
+            width: 900px;
+            margin: 0 auto;
+        }
+        div#wrapper{
+            width: 100%;
+            /* 내부에 컨텐츠가 없더라도 최소 크기 300px을 가짐 */
+            min-height: 300px;
+        }
+        header, footer, nav, aside, section{
+            border: 1px solid gray;
+            margin: 5px; padding: 10px;
+        }
+        header{
+            height: 50px;
+            background-color: skyblue;
+        }
+        nav, section, aside{
+            float: left;
+            height: 500px;
+        }
+        nav{
+            background-color: pink;
+            width: 100px;
+        }
+        nav ol{
+            list-style: none;
+            padding: 0; margin: 0;
+        }
+        nav ol li{
+            text-align: center;
+            width: 100%;
+        }
+        nav ol li a{
+            text-decoration: none;
+            color: black;
+        }
+        nav ol li:hover a{
+            color: white;
+        }
+        section{
+            background-color: lightgreen;
+            width: 604px;
+        }
+        article{
+            width: 90%;
+            margin: 20px;
+            background-color: #999;
+        }
+        aside{
+            background-color: pink;
+            width: 100px;
+        }
+        footer{
+            height: 50px;
+            background-color: skyblue;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <p>header</p>
+        </header>
+        <main>
+            <nav>
+                <p>nav</p>
+                <ol>
+                    <li><a href="">menu-1</a></li>
+                    <li><a href="">menu-2</a></li>
+                    <li><a href="">menu-3</a></li>
+                </ol>
+            </nav>
+            <section>
+                <p>section</p>
+                <article>
+                    <p>article</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum consequuntur cum nulla mollitia qui odit est in placeat nostrum facilis. Facilis, fugit iure aliquid repudiandae quo aperiam, odio officia maiores itaque quod molestias omnis? Ad quibusdam in impedit ducimus sit vitae voluptates? Doloribus explicabo voluptas quibusdam sed facilis ab ducimus eveniet animi, consectetur laborum earum temporibus. Sapiente, officiis? Doloribus ipsa, libero vero dicta iste mollitia repellendus maiores harum neque alias, facere quis officiis dolorum laudantium ut excepturi. Est officia quos at aut cumque laboriosam animi eaque molestias recusandae, esse atque eos consequuntur ex assumenda quod quis pariatur quasi nisi dolor.</p>
+                </article>
+            </section>
+            <aside>
+                <p>aside</p>
+            </aside>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

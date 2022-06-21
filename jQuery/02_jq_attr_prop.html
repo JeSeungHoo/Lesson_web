@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){
+            // = window.onload = function(){}
+            // = $(document).ready(function(){})
+            $(`button`).click(function(){
+                let value = $(`#dog`).attr(`src`);
+                alert(value);
+            });
+            $(`#propValue`).click(function(){
+                let value = $(`#dog`).prop(`src`);
+                alert(value);
+            })
+            $(`#dog`).click(function(){
+                $(`#dog`).attr(`src`,`../img/pome.png`);
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="../img/poodle.png" alt="poodle" id="dog" width="120" height="100"/>
+    <button>attr 출력</button>
+    <button id="propValue">prop 출력</button>
+</body>
+</html>

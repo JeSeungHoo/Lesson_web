@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <!-- <script src="js/jquery-3.6.0.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+<!-- 페이지 호출마다 jQuery 최신 버전 갱신 -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+         // == wondow.onload = function(){alert();};
+        jQuery(document).ready(function(){
+            alert(`hello jQuery! - 1`);
+        });
+        $(document).ready(function(){
+            alert(`HELLO jQuery! - 2`);
+        });
+        let _ = $.noConflict();
+        _(document).ready(function(){
+            alert(`Hello jQuery! - 3`);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

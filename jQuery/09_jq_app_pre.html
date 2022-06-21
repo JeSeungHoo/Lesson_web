@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <a href="http://koreate.net">한국기술교육직업전문학교</a>
+    <hr/>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ab laborum, quia blanditiis sint autem unde. Ea quod numquam, consequuntur exercitationem rerum vero ducimus possimus repudiandae! Et ipsum ipsam sint.</p>
+    <button id="pre">prepend</button>
+    <button id="app">append</button>
+    <button id="bef">before</button>
+    <button id="aft">after</button>
+    <button id="html">html</button>
+
+    <script>
+        $(`p`).css(`border`,`1px solid black`);
+        $(`#pre`).click(function(){ // 요소 내부의 제일 앞
+            $(`p`).prepend(`<b>append</b>`);
+        });
+        $(`#app`).click(function(){ // 요소 내부의 제일 뒤
+            $(`p`).append(`<b>append</b>`);
+        });
+        $(`#bef`).click(function(){ // 요소의 앞
+            $(`p`).before(`<b>before</b>`);
+        });
+        $(`#aft`).click(function(){ // 요소의 뒤
+            $(`p`).after(`<b>after</b>`);
+        });
+        $(`#html`).click(function(){ // innerHTML
+            $(`p`).html(`<h1 style='text-align:center;'>さようなら</h1>`);
+        });
+    </script>
+</body>
+</html>

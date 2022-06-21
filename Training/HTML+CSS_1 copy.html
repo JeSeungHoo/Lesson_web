@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        *{margin:0; padding:0;}
+        .wrap{
+            margin: 0 auto;
+            width: 960px; height: 50px;
+        }
+        .flex{
+            display: flex;
+            flex-flow:row ;
+        }
+        li{
+            width: 180px; height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-right: none;
+            background: gray;
+            color: white;
+        }
+        li:hover{
+            background: white;
+            color: gray;
+            cursor: pointer;
+        }
+        li:last-child{
+            border-right:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="wrap">
+        <ul class="flex">
+            <li>menu-1</li>
+            <li>menu-2</li>
+            <li>menu-3</li>
+            <li>menu-4</li>
+        </ul>
+    </nav>
+</body>
+</html>

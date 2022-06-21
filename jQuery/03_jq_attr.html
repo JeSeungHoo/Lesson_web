@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){ // setAttribute(), getAttribute()
+            $(`img`).attr(`src`,`../img/pome.png`);
+            $(`img`).attr(`art`,`포메라니안`);
+            $(`img`).attr(`width`,`120`);
+            $(`img`).attr({ // 객체가 들어갈 때는 속성명=변수
+                alt : `강아지 그림`,
+                src : `../img/poodle.png`,
+                width : 120,
+                height : 100
+            });
+
+            // $(`.box`).css(`width`,100);
+            // $(`.box`).css(`height`,100);
+            // $(`.box`).css(`backgroundColor`,`red`);
+
+            let obj = {
+                width : 100,
+                height : 100,
+                backgroundColor : `yellow`,
+                margin: 10,
+                float : `left`,
+            };
+            $(`.box`).css(obj);
+        });
+    </script>
+</head>
+<body>
+    <img />
+    <img />
+    <img />
+    <div>dummy</div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        *, html, body{
+            margin: 0; padding: 0; height: 100%;
+        }
+        .wrap{
+            margin: 0 auto; width: 600px; background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .item{
+            width: 100px; height: 100px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        /* flex-grow[nowrap일 때 사용]에 부여된 속성값의 합을 기준으로 남은 여백을 비율에 따라 나눔 
+        wrap의 width가 600px, width가 100px인 item이 4개이므로 남은 여백인 200px을 값에 따라 나누어 가진다. */
+        .item01{
+            flex-grow: 1;
+        }
+        .item02{
+            flex-grow: 1;
+        }
+        .item03{
+            flex-grow: 0;
+        }
+        .item04{
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item item01">01</div>
+        <div class="item item02">02</div>
+        <div class="item item03">03</div>
+        <div class="item item04">04</div>
+    </div>
+</body>
+</html>

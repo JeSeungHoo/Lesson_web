@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script> // 선생님과 같이
+    //         function changeColor(color){
+    //     document.body.style.backgroundColor=color;
+    // }
+    // // window.onload = 브라우저 문서가 모두 출력되고 준비가 완료되었을 때
+    // window.onload = function(){
+
+    // let pink = document.getElementById(`pink`);
+    // pink.onclick = function(){
+    //     // document.body.style.backgroundColor=`pink`;
+    //     document.body.style.backgroundColor=pink.id;
+    // }
+
+    // let orangeTag = document.querySelector(`#orange`);
+    // orangeTag.addEventListener(`click`, function(){
+    //     console.log(this);
+    //     document.body.style.backgroundColor=this.id;
+    // });
+    // }
+    </script>
+</head>
+<body>
+    <!-- <label>
+        <input type="radio" name="r1" id=""/>
+        lightblue
+    </label>
+    <label>
+        <input type="radio" name="r1" id=""/>
+        lightgreen
+    </label>
+    <label>
+        <input type="radio" name="r1" id=""/>
+        pink
+    </label>
+    <label>
+        <input type="radio" name="r1" id=""/>
+        orange
+    </label> -->
+
+<!-- <script> // 자습
+    // let lightblue = document.querySelector(`label:nth-child(1)`);
+    // let lightgreen = document.querySelector(`label:nth-child(2)`);
+    // let pink = document.querySelector(`label:nth-child(3)`);
+    // let orange = document.querySelector(`label:nth-child(4)`);
+    // lightblue.onclick = function(){
+    //     document.body.style.backgroundColor = `lightblue`;
+    // }
+    // lightgreen.onclick = function(){
+    //     document.body.style.backgroundColor = `lightgreen`;
+    // }
+    // pink.onclick = function(){
+    //     document.body.style.backgroundColor = `pink`;
+    // }
+    // orange.onclick = function(){
+    //     document.body.style.backgroundColor = `orange`;
+    // }
+
+    let labels = document.getElementsByTagName(`label`);
+    for(let i = 0; i < labels.length; i++){
+        labels[i].onclick = function(){
+            document.body.style.backgroundColor = this.innerText;
+        } // labels[i]의 속성이므로 this = labels[i]
+    }
+</script> -->
+
+<!-- 선생님과 같이 -->
+<!-- <label>
+    <input type="radio" name="r1" id="" onclick="document.body.style.backgroundColor='lightblue';"/>
+    lightblue
+</label>
+<label>
+    <input type="radio" name="r1" id="" onclick="changeColor(`lightgreen`);"/>
+    lightgreen
+</label>
+<label>
+    <input type="radio" name="r1" id="pink"/>
+    pink
+</label>
+<label>
+    <input type="radio" name="r1" id="orange"/>
+    orange
+</label> -->
+<label>
+    <input type="radio" name="r1" id=""/>
+    lightblue
+</label>
+<label>
+    <input type="radio" name="r1" id=""/>
+    lightgreen
+</label>
+<label>
+    <input type="radio" name="r1" id=""/>
+    pink
+</label>
+<label>
+    <input type="radio" name="r1" id=""/>
+    orange
+</label>
+<script>
+    let radios = document.getElementsByName(`r1`);
+    console.log(radios.length);
+    let labels = document.getElementsByTagName(`label`);
+    for(let i = 0; i < radios.length; i++){
+        console.log(radios[i]);
+        console.log(labels[i].innerText);
+    }
+    for(let i in radios){
+        radios[i].onclick = function(){
+            document.body.style.backgroundColor = labels[i].innerText;
+        }
+    }
+    console.clear();
+    for(let item of radios){
+        console.log(item);
+        item.onclick=function(){
+            let color = item.parentNode.innerText;
+            console.log(color);
+            document.body.style.backgroundColor=color;
+        }
+    }
+</script>
+</body>
+</html>

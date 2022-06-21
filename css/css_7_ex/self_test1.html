@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>css_animation1.html</title>
+    <style>
+        div{
+            width: 150px; height: 150px; 
+            background-color: lightgoldenrodyellow;
+            animation: move infinite alternate 1500ms ease-in-out;
+        }
+        @keyframes move {
+            50%{
+                transform: translate(150px);
+            }
+            100%{
+                transform: translate(300px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

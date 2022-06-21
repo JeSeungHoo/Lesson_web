@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Audio tag</title>
+</head>
+<body>
+    <!-- 
+        audio 태그의 속성
+        src=경로 지정
+        preload=재생하기 전에 데이터를 모두 불러올지 여부 지정
+        autoplay=자동 재생 여부 지정(속성은 있지만, 브라우저에서 지원을 잘 하지 않음)
+        loop=반복 여부 지정
+        controls=재생 도구 출력 여부 지정
+        음악 파일은 HTML과 같은 폴더에 준비
+     -->
+     <audio src="ex.MP3" controls="controls"></audio>
+     <audio src="ex.MP3" controls="controls" autoplay="autoplay"></audio>
+     <audio src="ex.MP3" controls autoplay></audio>
+
+     <!-- 웹 브라우저의 제약 없이 사용 가능한 Source 태그 -->
+     <audio controls="controls">
+         <source src="ex.MP3" type="audio/mp3"/>
+         <source src="ex.mp3" type="audio/ogg"/>
+     </audio>
+
+
+
+</body>
+</html>

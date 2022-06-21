@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<HTML>
+ <HEAD>
+  <TITLE> FLEX </TITLE>
+  <style>
+	*{
+		margin: 0; padding: 0;
+	}
+	  #wrap{
+		  border: 1px solid red;
+		  width: 100%; height: 1050px;
+	  }
+	  header{
+		  text-align: center;
+	  }
+	  footer{
+		  background-color: black;
+		  color: white; height: 150px;
+		  text-align: center; line-height: 150px;
+	  }
+	  #menus{
+		  width:100%;
+		  height: 650px;
+		  display: flex;
+		  flex-flow: row wrap;
+		  justify-content: space-between;
+	  }
+	  #menus div{
+		border: 1px solid black;
+		height: 300px;
+	  }
+	  #menu1{
+		width: 33%; 
+		background: url(../img/dish1.jpg);
+		background-size: cover;
+	}
+	  #menu2{
+		width: 33%; 
+		background: url(../img/dish2.jpg);
+		background-size: cover;}
+	  #menu3{
+		width: 33%; 
+		background: url(../img/dish3.jpg);
+		background-size: cover;}
+	  #menu4{
+		width: 33%; 
+		background: url(../img/dish4.jpg);
+		background-size: cover;}
+	  #menu5{
+		width: 66.5%;
+		background: url(../img/dish5.jpg);
+		background-size: cover;}
+  </style>
+  <META charset="utf-8">
+ </HEAD>
+ <BODY>
+	<div id="wrap">
+		<header>
+			<h1>솔로의 식탁</h1>
+		</header>
+		<article>
+			<div id="menus">
+				<div id="menu1">					
+				</div>
+				<div id="menu2">					
+				</div>
+				<div id="menu3">					
+				</div>
+				<div id="menu4">					
+				</div>
+				<div id="menu5">					
+				</div>
+			</div>
+		</article>
+		<footer>
+			<p>솔로의 식탁</p>
+		</footer>
+	</div>
+ </BODY>
+</HTML>
+<script>
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        #box{
+            position: absolute;
+            top:0;
+            left:0;
+            width:70px;
+            height:70px;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" onclick="catchBox(this);">잡아랏!</div>
+    <script>
+        let x=0, y=0;
+        let interval = window.setInterval(function(){
+            let top=0, left=0;
+            let box = document.getElementById(`box`);
+            top = screen.availHeight;
+            left = screen.availWidth;
+            x = parseInt(Math.random()*left);
+            y = parseInt(Math.random()*top);
+            box.style.left = x+`px`;
+            box.style.top = y+`px`;
+            let r=0, g=0,b=0;
+            r = parseInt(Math.random()*255);
+            g = parseInt(Math.random()*255);
+            b = parseInt(Math.random()*255);
+            box.style.backgroundColor =`rgb(`+r+`,`+g+`,`+b+`)`;
+        },400);
+        function catchBox(box){
+            box.innerHTML = `잡았다 요놈!`;
+            box.style.backgroundColor = `red`;
+            box.style.color =`white`;
+            clearInterval(interval);
+        }
+    </script>
+</body>
+</html>

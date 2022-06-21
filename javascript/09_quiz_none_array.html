@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+    /*
+        실습
+        1. 배열 선언
+        2. prompt를 이용해서 사용자에게 5개의 점수를 입력받아 배열에 저장
+        3. 배열에 저장된 1~100까지의 점수들 중 최소값과 최대값을 구하시오.
+    */
+        let max, min, englishScore1, englishScore2, englishScore3, englishScore4, englishScore5;
+        englishScore1 = Number(prompt(`저장할 영어 점수를 입력해주세요.`)); // prompt로 반환된 데이터(data)는 문자열(string)
+        englishScore2 = Number(prompt(`저장할 영어 점수를 입력해주세요.`));
+        englishScore3 = Number(prompt(`저장할 영어 점수를 입력해주세요.`));
+        englishScore4 = Number(prompt(`저장할 영어 점수를 입력해주세요.`));
+        englishScore5 = Number(prompt(`저장할 영어 점수를 입력해주세요.`));
+        max = min = englishScore1; // 대입 연산자는 오른쪽에서부터 대입
+        if(englishScore2 > max){            max = englishScore2;        } // 아스키코드, 유니코드 등의 숫자 번호로 비교됨 => 100을 입력했을 때 이상해짐
+        if(englishScore3 > max){            max = englishScore3;        }
+        if(englishScore4 > max){            max = englishScore4;        }
+        if(englishScore5 > max){            max = englishScore5;        }
+        document.write(`english max score : ${max}`);
+        if(englishScore2 < min){            min = englishScore2;        }
+        if(englishScore3 < min){            min = englishScore3;        }
+        if(englishScore4 < min){            min = englishScore4;        }
+        if(englishScore5 < min){            min = englishScore5;        }
+        document.write(`english min score : ${min}`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

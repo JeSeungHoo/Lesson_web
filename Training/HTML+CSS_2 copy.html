@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        .wrap{
+            height: 120px;
+            display: flex;
+            align-items: center;
+        }
+        .img{
+            width: 100px; height: 120px;
+            background: url(../img/back.png) no-repeat center;
+            background-size: contain;
+        }
+        .img:hover{
+            background-image: url(../img/spade.png);
+        }
+    </style>
+</head>
+<body>
+    <h3>:hover 활용</h3>
+    <hr/>
+    <div class="wrap">
+        <p>마우스를 올리면 카드의 앞면이 보인다.</p>
+        <div class="img"></div>
+    </div>
+</body>
+</html>

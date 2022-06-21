@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <input type="password" id="pass"/>
+    <label>
+        <input type="checkbox" id="open"/>비밀번호 보기
+    </label>
+    <label for="">
+        <input type="radio" name="r1" id=""/>test
+    </label>
+    <label for="">
+        <input type="radio" name="r1" id=""/>test
+    </label>
+    <label for="">
+        <input type="radio" name="r1" id=""/>test
+    </label>
+
+    <script>
+        $(`#open`).on(`change`,function(){
+            if($(this).is(`:checked`)){
+                $(`#pass`).attr(`type`,`text`);
+            }else{
+                $(`#pass`).attr(`type`,`password`);
+            }
+        }).on(`click`,function(event){
+            event.preventDefault();
+        });
+
+        $(`input[type=radio]`).on(`keydown`,function(e){
+            console.log(e.key);
+            console.log(e.keyCode);
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

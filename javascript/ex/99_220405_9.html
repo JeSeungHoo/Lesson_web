@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        let a = prompt(`가로길이를 입력하세요`);
+        let b = 2*a-1;
+        for(let i = 1; i<=a*2-1; i++){
+            if(i<=a){
+                for(let j = 1; j<=i; j++){
+                    document.write(`*`);
+                }
+            }else{
+                for(let k = b; k>=1; k--){
+                    document.write(`*`);
+                }
+            }
+            b--;
+            document.write(`<br/>`);
+        }
+
+        let size = prompt("가로길이를 입력하세요");
+        for(let i = 1; i <= size*2-1; i++){
+            if(i<=size){
+                for(let j = 1; j <= i; j++){
+                    document.write("*");
+                }
+            }else{
+                for(let k = 0; k >= i-(size*2-1) ;k--){
+                    document.write("*");
+                }
+            }
+            document.write("<br/>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Type Selector</title>
+    <style>
+        /* 
+        margin: 외부 여백
+        padding: 내부 여백
+        */
+        *{
+            padding: 0;
+        }
+        body{
+            background-color: #12345678;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            margin: 20px;
+            padding: 20px;
+            background-color: skyblue;
+        }
+        article{
+            background-color: orange;
+        }
+        ul{
+            background-color: red;
+        }
+        li{
+            /* RGB: 0~255 */
+            background-color: rgb(155,155,255);
+            /* #RRGGBB: RGB를 16진수(0~f)로 표현 */
+            background-color: #abcdef;
+            /* rgb Alpha: 투명도(0~1) */
+            background-color: rgba(255,0,0,0.5)
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            HEADER
+            <nav>
+                <ul>
+                <li>메뉴1</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            SECTION
+            <article>ARTICLE1</article>
+            <article>ARTICLE2</article>
+        </section>
+        <aside>ASIDE</aside>
+        <footer>FOOTER</footer>
+    </main>
+</body>
+</html>

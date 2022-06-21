@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 필수 속성:href -->
+    <!-- 절대경로 지정 -->
+    <a href="http://hanbit.co.kr">한빛미디어</a><br />
+    <a href="http://naver.com/">네이버</a><br />
+    <a href="http://daum.net/">다음</a><br />
+
+    <!-- / = 현재 HTML 폴더의 최상위 위치
+        ex:C:\Users\023\Desktop\workspace\web\HTML일 때
+        C드라이브    -->
+    <a href="/pen.jpg">귀여운 펭귄</a><br/>
+        <!-- C드라이브에 pen.jpg가 없으므로 출력되지 않는 모습 -->
+
+    <!-- 상대 경로 지정 -->
+    <a href="Pen.jpg">귀여운 펭귄</a>
+        <!-- /가 없는 상태, 즉 HTML이 위치한 폴더에서 찾아 출력 --> 
+
+<!-- /최상위폴더 ./현재폴더 ../상위폴더 -->
+
+
+    <!-- id 속성이 ""인 태그의 위치로 이동 -->
+    <a href="#alpha">Alpha 부분</a>
+    <a href="#beta">Beta 부분</a>
+    <a href="#gamma">Gamma 부분</a>
+    <hr>
+    <h1 id="alpha">Alpha</h1>
+    <p>Alpha를 설명하는 텍스트</p>
+    <h1 id="beta">Beta</h1>
+    <p>Beta를 설명하는 텍스트</p>
+    <h1 id="gamma">Gamma</h1>
+    <p>Gamma를 설명하는 텍스트</p>
+</body>
+</html>

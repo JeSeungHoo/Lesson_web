@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        document.write("이중 for문 2개를 이용한 방법===================<br/>");
+        let size = prompt("가로길이를 입력하세요");
+        for(let i=1; i<=size;i++){
+            for(let j=0; j<i; j++){
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+        for(let i=0; i<size-1; i++){
+            for(let j=size-1; j>i;j--){
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+
+        document.write("for if문을 이용한 방법===================<br/>");
+        let max = size * 2 -1 ;
+        // size : 5, max : 9
+        for(let i = 0; i < max; i++){
+            // i : 0 ~ 8
+            if(i < size){ // i : 0 ~ 4
+                for(let j = 0; j < i+1; j++){
+                    document.write("*");
+                }
+            }else{ // i : 5 ~ 8
+                for(let j = 1; j <= max-i; j++){
+                    document.write("*");
+                }
+            }
+            document.write("<br/>");
+        }
+
+        document.write("외부 count를 이용한 방법===================<br/>");
+        let count = 1
+        for(let i=1; i<=max; i++){
+            for(let j=1; j<=count; j++){
+                document.write("*");
+            }
+            if(i < size){
+                count++;
+            }else{
+                count--;
+            }
+            document.write("<br/>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

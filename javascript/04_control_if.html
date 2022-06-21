@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        let a = 10;
+        let b = 20;
+        if(a > b){
+            alert('a가 b보다 큽니다.');
+        } else if(a == b){
+            alert('a와 b의 값이 동일합니다.');
+        } else{
+            alert('a가 b보다 작습니다.');
+        }
+
+        let confirm_test = confirm('30,000,000원 결제하시겠습니까?');
+        console.log(confirm_test);
+        if(confirm_test)
+            alert("결제 완료");
+        else
+            alert("결제 실패");
+
+        let x, y;
+        let input;
+
+        input = prompt('정수를 입력해주세요', '정수로 작성');
+        x = input;
+        alert(input);
+        document.write(typeof(input));
+        input = prompt('정수를 입력해주세요!');
+        y = input;
+        let result = x + y;
+        result = x / y;
+        alert(result); // 문자열과 문자열은 나누기 연산이 되지 않기 때문에 수치로 변경할 수 있으면 자동으로 수치로 변경하여 계산한다! or NaN(Not a Number)
+        if(isNaN(x) || isNaN(y)){
+            alert("연산할 수 없는 값이 포함되어 있습니다.");
+        }
+        x = parseInt(x);
+        y = parseInt(y);
+        result = x + y;
+        alert(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

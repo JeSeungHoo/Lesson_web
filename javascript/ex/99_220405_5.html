@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        const ANSWER = 50;
+        let c = 0;
+        while(true){
+            let number = prompt(`1~100까지의 정수를 입력해주세요.`);
+            c++;
+            if(number < ANSWER){
+                alert(`낮습니다. 추측횟수 : ${c}`);
+            }else if(number > ANSWER){
+                alert(`높습니다. 추측횟수 : ${c}`);
+            }else{
+                alert(`성공입니다. 추측횟수 : ${c}`); break;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

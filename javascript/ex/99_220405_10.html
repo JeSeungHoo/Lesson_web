@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        let a = prompt(`라인갯수를 입력하세요`);
+        let c = 1;
+        let d = a;
+        for(let i=1; i<=2*a-1; i++){
+            if(i<=a){
+                for(let j=1; j<=a-c; j++){
+                    document.write('&nbsp');
+                }
+                for(let j=1; j<=2*c-1; j++){
+                    document.write(`*`);
+                }
+                for(let j=1; j<=a-c; j++){
+                    document.write('&nbsp');
+                }
+                c++;
+            }else{
+                d--;
+                for(let j=1; j<=a-d; j++){
+                    document.write('&nbsp');
+                }
+                for(let j=1; j<=2*d-1; j++){
+                    document.write(`*`);
+                }
+                for(let j=1; j<=a-d; j++){
+                    document.write('&nbsp');
+                }
+            }
+            document.write(`<br/>`);
+        }
+
+        document.write(`<hr/>`);
+
+        let max = a*2-1;
+        let count = 1;
+        for(let i = 1; i <= max; i++){
+            for(let j = 1; j <= (max-count)/2; j++){
+                document.write("　");
+            }
+            for(let j =1; j <= count; j++){
+                document.write("★");
+            }
+            // for(let j = 1; j <= (max-count)/2; j++){
+            //     document.write("&nbsp");
+            // }
+            document.write("<br/>");
+            if(i < a){
+                count +=2;
+            }else{
+                count -=2;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

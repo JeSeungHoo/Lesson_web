@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>css_animation_ball_2.html</title>
+    <style>
+        div{
+            margin: 500px 5px 5px 0;
+            float: left;
+            width: 100px; height: 100px;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: skyblue;
+        }
+        div.a1{
+            animation-name: downup;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 0ms;
+            animation-iteration-count: infinite;
+        }
+        div.a2{
+            animation-name: downup;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 100ms;
+            animation-iteration-count: infinite;
+        }
+        div.a3{
+            animation-name: downup;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 200ms;
+            animation-iteration-count: infinite;
+        }
+        div.a4{
+            animation-name: downup;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 300ms;
+            animation-iteration-count: infinite;
+        }
+        div.a5{
+            animation-name: downup;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 400ms;
+            animation-iteration-count: infinite;
+        }
+        @keyframes downup{
+            0%{
+                transform: translateY(0px);
+            }
+            25%{
+                transform: translateY(-30px);
+            }
+            50%{
+                transform: translateY(40px);
+            }
+            75%{
+                transform: translateY(-500px);
+            }
+            100%{
+                transform: translateY(0px);
+                opacity: 0.25;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a1"></div>
+    <div class="a2"></div>
+    <div class="a3"></div>
+    <div class="a4"></div>
+    <div class="a5"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <input type="button" value="확인" id="btn"/>
+    <input type="button" value="event 제거" id="removeEvent"/>
+    <input type="button" value="Test" onclick="document.write(`btn에 onclick 속성값을 추가`);"/> <!-- 태그에 직접 onclick 속성을 부여하는 방법 -->
+    
+
+    <script>
+        let btn = document.getElementById(`btn`);
+    // 문서 객체 속성을 이용하는 방법
+        // btn.onclick = function(){
+        //     alert(`#btn click!!!`);
+        // } 
+
+    // eventListener 등록 --- on 제외
+        // btn.addEventListener(`click` , function(){alert(`btnClick!!~!!`);});
+        function btnEvent(){
+            document.write(`eventListener click`);
+        }
+        btn.addEventListener(`click`, btnEvent);
+
+        document.getElementById(`removeEvent`).onclick = function(){
+            btn.removeEventListener(`click`, btnEvent);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <!-- 전체 레이아웃  -->
+    <style>
+        *{margin:0;padding:0;color:white;}
+        body{width: 960px; height: 720px;}
+    </style>
+    <!-- header -->
+    <style>
+        header{
+            height: 80px;
+            padding: 20px;
+            box-sizing: border-box;
+            border: solid 1px black;
+            background-color: lightblue;
+            margin-bottom: 10px;
+        }
+    </style>
+    <!-- main -->
+    <style>
+        main{
+            height: 530px;
+            display: flex;
+            justify-content: space-between;
+        }
+        main > *{border: 1px solid black;}
+        nav, aside{
+            padding: 20px;
+            width: 15%;
+            background-color: lightpink;
+        }
+        nav ul{
+            list-style: none;
+            padding: 10px;
+        }
+        nav ul li{
+            color: black;
+        }
+        nav ul li:hover{
+            color: white;
+        }
+        section{
+            padding: 20px;
+            margin: 0 5px;
+            width: 70%;
+            background-color: lightgreen;
+        }
+        article{
+            margin: 40px 0 0 20px;
+            width: 90%;
+            background-color: lightgray;
+        }
+    </style>
+    <!-- footer -->
+    <style>
+        footer{
+            height: 80px;
+            padding: 20px;
+            box-sizing: border-box;
+            border: solid 1px black;
+            background-color: lightblue;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>header</p>
+    </header>
+    <main>
+        <nav>
+            <p>nav</p>
+            <ul>
+                <li>menu-1</li>
+                <li>menu-2</li>
+                <li>menu-3</li>
+            </ul>
+        </nav>
+        <section>
+            <p>section</p>
+            <article>
+                <p>article</p>
+                <br/>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id numquam veniam incidunt odit recusandae? Ipsam, debitis aperiam laborum sequi, eos sapiente mollitia, vel perferendis temporibus ad nobis. Aspernatur, qui voluptatum?
+            </article>
+        </section>
+        <aside>
+            <p>aside</p>
+        </aside>
+    </main>
+    <footer>
+        <p>footer</p>
+    </footer>
+</body>
+</html>

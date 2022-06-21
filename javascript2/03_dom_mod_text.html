@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <script></script>
+</head>
+<body>
+    <div id="ex"><b>여기가 div로 선언되었습니다.</b></div>
+    <form>
+        <input type="text" name="exName" id="exName"/>
+    </form>
+    <a href="#" onclick="get();">div 요소 내용 출력</a>
+    <a href="#" onclick="set();">div 요소 내용 변경</a>
+
+    <script> // script는 일반적으로 body의 후미에 작성
+        function get(){
+            // alert(`되나?`); ---- 먼저 함수가 정상적으로 호출되는지 확인
+            let ex = document.getElementById(`ex`);
+            console.log(ex);
+            console.log(ex.innerHTML);
+            console.log(ex.textContent);
+        }
+        function set(){
+            // alert(`된다`);
+            let ex = document.getElementById(`ex`);
+            let exName = document.getElementById(`exName`);
+            // ex.textContent = exName.value; //
+            ex.innerHTML = exName.value;
+        }
+    </script>
+</body>
+</html>

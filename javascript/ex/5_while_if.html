@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>숫자 맞추기 게임</title>
+    <style></style>
+    <script>
+        let isRun = true;   // 반복 탈출 flag
+        let guess = 78;     // 정답
+        // parseInt(data) = data를 정수로 변환
+        // Math.random() = 0~0.999999999999의 수 사이에서 랜덤
+        guess = parseInt(Math.random() * 100)+1;
+        let result = "";    // 결과 출력 문자열
+        let count = 0;      // 추측횟수
+        // do while문 - 최초에 한 번은 조건에 상관없이 무조건 실행
+        do{
+            let input = prompt("1~100까지의 정수를 입력해주세요.");
+            if(input == "" || input == null || isNaN(input)){
+                alert("1~100까지의 정수만 입력가능합니다.");
+                continue; // 아래를 실행하지 않고 반복문 최상단 이동
+            }
+            if(input == guess){
+                result = "성공입니다.";
+                isRun = false;
+            }else if(input < guess){
+                result = "낮습니다.";
+            }else{
+                result = "높습니다.";
+            }
+            count++;
+            alert(result+" 추측횟수 : "+count);
+        }while(isRun);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

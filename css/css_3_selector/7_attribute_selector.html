@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>속성 선택자</title>
+    <style>
+        [target]{
+            font-size: 1.5em;
+        }
+        a[target="_blank"]{
+            color: red;
+        }
+        /* class 속성값이 정확하게 apple인 요소 */
+        a[class="apple"]{
+            color: aqua;
+        }
+        /* Shift+\ = | -> orange 클래스를 가지고 있거나 orange-로 시작하는 모든 요소 */
+        a[class|="orange"]{
+            color: orange;
+        }
+        /* class 값으로 banana를 가진 요소 */
+        a[class~="banana"]{
+            color: aquamarine;
+        }
+        /* class 속성값이 dummy로 시작하는 모든 요소 */
+        div[class^="dummy"]{
+            background-color: red;
+            color: white;
+        }
+        /* class 속성값이 end로 끝나는 모든 요소 */
+        div[class$="end"]{
+            background-color: red;
+        }
+        /* class 속성값이 어떻게 조합되든 상관없이 grape가 있는 요소 */
+        div[class*="grape"]{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" target="_blank">link</a>
+    <a href="#" target="_self">link</a>
+    <a href="#">link</a>
+    <br/><hr/>
+    <h3></h3>
+    <a href="#" class="apple">class="apple"</a>
+    <a href="#" class="apple pine">class="apple pine"</a>
+    <a href="#" class="pine-apple">class="pine-apple"</a>
+    <br/><hr/>
+    <a href="#" class="orange">orange</a>
+    <a href="#" class="red orange">red orange</a>
+    <a href="#" class="red-orange">red-orange</a>
+    <a href="#" class="orange-red">orange-red</a>
+    <br/><hr/>
+    <a href="#" class="banana">banana</a>
+    <a href="#" class="monkey banana">monkey banana</a>
+    <a href="#" class="monkey-banana">monkey-banana</a>
+    <br/><hr/>
+    <div class="dummy">dummy</div>
+    <div class="dummy test">dummy test</div>
+    <div class="dummy-test">dummy-test</div>
+    <div class="dummy_test">dummy_test</div>
+    <div class="test dummy">test dummy</div>
+    <div class="test_dummy">test_dummy</div>
+    <br/><hr/>
+    <div class="end">end</div>
+    <div class="start end">start end</div>
+    <div class="ok_end">ok_end</div>
+    <div class="end bye">end bye</div>
+    <br/><hr/>
+    <div class="grape">grape</div>
+    <div class="tasty grape">tasty grape</div>
+    <div class="grape-tasty">grape-tasty</div>
+    <div class="tastygrape">tastygrape</div>
+    <div class="tastyGrape">tastyGrape</div>
+</body>
+</html>

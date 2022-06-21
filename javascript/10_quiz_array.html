@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        let englishScores = []; 
+        englishScores = new Array();
+        let max, min;
+        const STUDENT_NUM = 5;
+
+    /*    let score = prompt(`저장할 영어 점수를 입력해 주세요.`);
+        englishScores[0] = score;
+        score = prompt(`저장할 영어 점수를 입력해 주세요.`);
+        englishScores[1] = score;
+        score = prompt(`저장할 영어 점수를 입력해 주세요.`);
+        englishScores[2] = score;
+        score = prompt(`저장할 영어 점수를 입력해 주세요.`);
+        englishScores[3] = score;
+        score = prompt(`저장할 영어 점수를 입력해 주세요.`);
+        englishScores[] = score; */
+        
+        for(let index = 0; index < STUDENT_NUM; index++){
+            englishScores[index] = parseInt(prompt(`${index}번째 학생의 영어 점수를 입력해주세요.`));
+        }
+        console.log(englishScores);
+
+        max = min = englishScores[0];
+        for(let i = 1; i < englishScores.length; i++){
+            if(max < englishScores[i]){max = englishScores[i];}
+            if(min > englishScores[i]){min = englishScores[i];}
+        }
+
+        document.write(`english max score : ${max}<br/>english min score : ${min}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

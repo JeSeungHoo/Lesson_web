@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+	/**
+	 * 대상 : div#target
+	 * 기능 : target div 복사 & target div 요소 뒤에 추가
+	 * 함수 : clone(), insertAfter()
+	 */     //해당요소복사    해당요소를 (변수)뒤에 넣음  
+
+								// $(function(){
+								// 	$(`#run`).click(function(){
+								// 		$(`div#target:nth-of-type(1)`).clone().insertAfter(this);
+								// 	});
+								// });
+	// A.clone() === A 요소를 복제하여 반환
+	// let b = a.clone(); 
+	/*
+		A.before(B) === A 요소 앞에 B 삽입
+		A.after(B); === A 요소 뒤에 B 삽입
+		A.insertBefore(B) === A 요소를 B 앞에 삽입
+		A.insertAfter(B); === A 요소를 B 뒤에 삽입
+	*/
+	$(function(){
+		$(`#run`).click(function(){
+			let clone = $(`#target`).clone();
+			clone.insertAfter($(`#target`));
+		});
+	});
+</script>
+
+</head>
+
+<body>
+	<!-- before -->
+	<div id="target"
+		style="color: rgb(255, 255, 255); width: 180px; height: 100px; float: left; border: 1px solid rgb(34, 34, 34); background-color: rgb(34, 139, 34); margin: 10px; padding: 5px; background-position: initial initial; background-repeat: initial initial;">
+		div#target<br>
+		<br>
+		<br>
+		<span
+			style="color: rgb(255, 255, 255); background-color: rgb(255, 165, 0); margin: 10px; border: 1px solid rgb(34, 34, 34); padding: 5px; background-position: initial initial; background-repeat: initial initial;">span</span>
+	</div>
+	<!-- after -->
+	
+	<input type="button" value="run" id="run"/>
+</body>
+</html>

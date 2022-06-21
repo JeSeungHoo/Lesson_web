@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>open()새 창 열기</title>
+    <script>
+        // a로 연결되는 새 창은 기존 창과 연관 XXX
+        // open()으로 연결되는 새 창은 기존 창과 부모-자식 관계
+        let child;
+        function 새창열기(){
+            child = window.open(`./03_bom_location.html`, `_blank`, `width=300,height=300,top=100,left=100,resizable=no,scrollbars=no,titlebar=yes,locations=no`);
+        }
+        function windowClose(){
+            // 해당 윈도우를 종료
+            child.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="새 창 열기" onclick="새창열기()"/>
+    <input type="button" value="창 닫기" onclick="windowClose()"/>
+</body>
+</html>

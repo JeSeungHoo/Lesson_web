@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- table=표 삽입
+    thead=표의 머리(head) 생성
+    tbody=표의 본문(body) 생성
+    tfoot=표의 꼬리(foot) 생성
+    tr=표의 행(row) 삽입
+    th=표의 제목 요소(header) 생성
+    td=표의 일반 요소(data) 생성 
+    이러한 테이블 태그는 계층 구조로 작성-->
+
+    <!-- Table의 border 속성 = 테두리 굵기 -->
+    <!-- th, td의 속성
+    colspan=셀의 너비 지정
+    rowspan=셀의 높이 지정 -->
+<table border="10">
+    <thead>
+        <tr>
+            <td>머리글</td>
+            <td>머리글2</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>본문</td>
+            <td>본문2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>꼬리글</td>
+            <td>꼬리글2</td>
+        </tr>
+    </tfoot>
+</table>
+<hr>
+<h1>OO학교 시간표</h1>
+<table border="5">
+    <thead>
+        <tr>
+            <th></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1교시</td>
+            <td>영어</td>
+            <td>국어</td>
+            <td>과학</td>
+            <td>미술</td>
+            <td>기술</td>
+        </tr>
+        <tr>
+            <td>2교시</td>
+            <td>도덕</td>
+            <td>체육</td>
+            <td>영어</td>
+            <td>수학</td>
+            <td>사회</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<table border="1">
+    <tr>
+        <th colspan="2">지역별 홍차</th>
+    </tr>
+    <tr>
+        <th rowspan="3">중국</th>
+        <td>정산소종</td>
+    </tr>
+    <tr><td>기문</td></tr>
+    <tr><td>운남</td></tr>
+    <tr>
+        <th rowspan="4">인도 및 스리랑카</th>
+        <td>아삼</td>
+    </tr>
+    <tr><td>실론</td></tr>
+    <tr><td>다질링</td></tr>
+    <tr><td>닐기리</td></tr>
+</table>
+</body>
+</html>

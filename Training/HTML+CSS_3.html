@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>layout</title>
+    <style>
+        *{
+            margin: 0px; padding: 0px;
+            color: white;
+            box-sizing: border-box;
+        }
+        header{
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            padding-left: 12px;
+            background-color: lightblue;
+            margin-bottom: 12px;
+        }
+        nav{
+            box-sizing: border-box;
+            border: 1px solid black;
+            float: left;
+            padding-left: 12px;
+            padding-top: 20px;
+            width: 14%;
+            height: 1000px;
+            background-color: lightpink;
+            margin-bottom: 12px;
+        }
+        section{
+            box-sizing: border-box;
+            border: 1px solid black;
+            position: relative;
+            padding-left: 12px;
+            padding-top: 20px;
+            float: left;
+            width: 70%;
+            height: 1000px;
+            background-color: lightgreen;
+            margin-bottom: 12px;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+        article{
+            box-sizing: border-box;
+            /* margin-top: 100px; */
+            /* margin-left: 50px; */
+            position: absolute; top: 100px; left: 50px;
+            float: left;
+            width: 80%;
+            height: 500px;
+            background-color: lightgray;
+        }
+        aside{
+            box-sizing: border-box;
+            border: 1px solid black;
+            float: left;
+            padding-left: 12px;
+            padding-top: 20px;
+            width: 14%;
+            height: 1000px;
+            background-color: lightpink;
+            margin-bottom: 12px;
+        }
+        footer{
+            box-sizing: border-box;
+            margin-top: 12px;
+            border: 1px solid black;
+            clear: both;
+            padding-left: 12px;
+            padding-top: 20px;
+            width: 100%;
+            height: 100px;
+            background-color: lightblue;
+        }
+        ul{
+            padding: 20px;
+        }
+        li{
+            list-style-type:none;
+            color: black;
+        }
+        li:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        header
+    </header>
+    <nav>
+        nav
+        <ul>
+            <li class="menu1">menu-1</li>
+            <li class="menu2">menu-2</li>
+            <li class="menu3">menu-3</li>
+        </ul>
+    </nav>
+    <section>
+        section
+        <article>
+            article<br/><br/>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores necessitatibus, mollitia beatae minus sapiente sunt quidem voluptatum nihil quam facilis, praesentium sint. Asperiores, ratione. Aperiam, eveniet! Iure quod aperiam enim?
+        </article>
+    </section>
+    <aside>
+        aside
+    </aside>
+    <footer>
+        footer
+    </footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>setTimeout()지정된 시간만큼 지연 후 기능 수행</title>
+    <style></style>
+    <script>
+    // window.setTimeout(실행함수,지연시간ms)
+        function showAlert(){
+            window.setTimeout(function(){
+                alert(`setTimeout을 사용하여 표시됩니다.`);
+            },3000);
+        }
+    </script>
+</head>
+<body>
+    <p>
+        버튼을 누르면 3초 후에 경고 박스가 화면에 나타납니다.
+    </p>
+    <button onclick="showAlert();">눌러보세요!</button>
+</body>
+</html>

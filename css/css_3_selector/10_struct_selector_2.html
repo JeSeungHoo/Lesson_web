@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        li{
+            list-style: none;
+            float: left;
+            background-color: skyblue;
+            padding: 15px;
+        }
+        li:first-child{
+            border-radius: 10px 0 0 10px;
+        }
+        li:last-child{
+            border-radius: 0 10px 10px 0;
+        }
+        li > a{
+            text-decoration: none; /*없앰*/
+            text-decoration: underline; /*밑줄*/
+            text-decoration: overline; /*윗줄*/
+            color: white;
+        }
+        li:nth-child(2n){
+            background-color: pink;
+        }
+        li:nth-child(even):hover{
+            cursor: zoom-in;
+        }
+    </style>
+</head>
+<body>
+    <!-- ul>li*7>a{$번째} -->
+    <ul>
+        <li><a href="">1번째</a></li>
+        <li><a href="">2번째</a></li>
+        <li><a href="">3번째</a></li>
+        <li><a href="">4번째</a></li>
+        <li><a href="">5번째</a></li>
+        <li><a href="">6번째</a></li>
+        <li><a href="">7번째</a></li>
+    </ul>
+</body>
+</html>

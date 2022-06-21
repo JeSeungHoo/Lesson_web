@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <script>
+// 이벤트 버블링(전파) ---- 자식 요소까지 적용됨
+        function mouseOver(obj){
+            obj.style.border=`1px solid red`;
+            obj.style.cursor=`pointer`;
+            console.log(`mouse over!`);
+        }
+
+        window.onload = function(){
+            document.body.onmousemove = function(event){ // mousemove 이벤트 객체
+                let position = `x : ${event.pageX}, y : ${event.pageY}`; // 마우스 좌표 확인
+                document.getElementById(`pTag`).innerHTML = position;
+            }
+        }
+    </script>
+</head>
+<body>
+<!-- 이벤트 버블링(전파)  -->
+<!-- onmouseover = onmouseenter --- 기능은 똑같지만 버블링되냐 안 되냐의 차이 -->
+                                                                                    <!-- onmouseover="mouseOver(this); -->
+    <div style="background-color: yellow; width: 300px; height: 100px; padding: 10px;" onmouseenter="mouseOver(this);">
+        <div style="width: 280px; height: 80px; background-color: aqua;"></div>
+    </div>
+
+    <p id="pTag"></p>
+
+</body>
+</html>

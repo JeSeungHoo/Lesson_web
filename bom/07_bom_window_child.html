@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>child window</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h1>child Window</h1>
+    <input type="text" id="inputData"/>
+    <input type="button" value="가져오기" id="btn"/>
+    <hr/>
+    
+    <script>
+        let btn = document.getElementById(`btn`);
+        btn.onclick = function(){
+            let inputData = document.getElementById(`inputData`);
+            console.log(opener);
+            let sendData = opener.document.getElementById(`sendData`);
+            inputData.value = sendData.value;
+        }
+    </script>
+</body>
+</html>

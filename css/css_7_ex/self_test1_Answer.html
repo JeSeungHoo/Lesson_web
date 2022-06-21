@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>css_animation_box</title>
+    <style>
+        div{
+            width: 100px; height: 100px; background-color: red;
+            position: relative;
+            animation: move 2s ease  infinite normal ;
+            /* 기본값 ease: 느->빨->느 */
+            /* 기본값 normal: 정방향 */
+        }
+        @keyframes move {
+            0%{
+                left: 0px;
+            }
+            25%{
+                left: 100px;
+            }
+            50%{
+                left: 200px;
+            }            
+            75%{
+                left: 100px;
+            }
+            100%{
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

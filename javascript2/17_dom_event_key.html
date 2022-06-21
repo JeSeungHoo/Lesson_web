@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <form action="16_dom_event_default.html" method="get" name="loginForm">
+        ID : <input type="text" name="id" id="id"/><br/>
+        PW : <input type="password" name="pw" id="pw"/><br/>
+        <input type="button" value="전송" id="btn"/>
+    </form>
+
+    <script>
+        let id = document.getElementById(`id`);
+        let pw = document.getElementById(`pw`);
+        let btn = document.getElementById(`btn`);
+
+        id.onkeydown = function(event){
+            let keyName = event.key;
+            let keyCode = event.keyCode; // 아스키코드
+            console.log(`key : ${keyName}, keyCode : ${keyCode}`);
+            if(keyCode==13){
+                pw.focus();
+                checkValue(id);
+            }
+        }
+
+        // 혼자 해 본 것
+        // pw.onkeydown =function(event){
+        //     let keyCode = event.keyCode; // 아스키코드
+        //     if(keyCode==13){
+        //         btn.click();
+        //     }
+        // }
+        // btn.onclick = function(){
+        //     document.loginForm.submit();
+        // }
+        
+        pw.onkeydown = function(event){
+            if(event.key == `Enter`){
+                if(checkValue(id) && checkValue(pw)){
+                document.loginForm.submit();
+                }
+            }
+        }
+        function checkValue(obj){
+            // obj == id || pw
+            console.log(obj.value.length);
+            if(obj.value.length < 8){
+                alert(`${obj.id}가 짧습니다.`);
+                obj.focus();
+                return false;
+            }
+            return true;
+        }
+
+        btn.onclick = function(){
+            if(checkValue(id) && checkValue(pw)){
+                document.loginForm.submit();
+            }
+        }
+    </script>
+</body>
+</html>

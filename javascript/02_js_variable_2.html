@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <script>
+        temp = '천재';
+        console.log(temp);
+        var temp = "최기근"; // 변수 할당은 현재 줄에서 되지만, 변수 선언 var는 최상위로 이동=호이스팅 ---- 문법적으로는 잘못된 것
+        console.log(temp);
+
+        // let 호이스팅되지 않는 변수 선언 ---- 엄격하다
+        // console.log(temp2);
+        // let temp2 = "최기근";
+
+        // block scope 특정 명령문을 모아 놓는 공간
+        { 
+            var tempGlobal = "Global fields"; // var는 전역 변수이므로 밖에서도 사용됨  ---- 문법적으로는 잘못된 것
+            let tempLocal = "Local feilds"; // 블럭 안에서만 사용 가능
+        }
+        console.log(tempGlobal);
+        // console.log(tempLocal); // 오류
+
+        // var ES6 이전에 사용되던 변수 선언 키워드
+        // let ES6부터 적용된 변수 선언 키워드 (권장)
+        // read / write
+        // const (constant:상수)(권장) - 한 번 변수가 할당되면 변경되지 않음
+        const pi = 3.141592;
+        pi = 3.14; // 초기화 안 됨 --- 오류
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

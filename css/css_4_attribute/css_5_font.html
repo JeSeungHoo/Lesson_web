@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <style>
+        span{
+            font-size: 16px;
+            font-size: 12pt; /* 기본값: 16px=12pt=1em=100% */
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 200%;
+        }
+        .font{
+            font-size: 40px;
+            font-weight: normal;
+            /* 
+           lighter          normal             bold       bolder
+            100   200   300   400   500   600   700   800   900
+         부모보다 얇게                                    부모보다 두껍게
+            */
+            font-family: Arial, Times, sans-serif;
+            /* 이탤릭체 글꼴 사용 */
+            font-style: italic;
+            /* 기울어짐 글꼴 */
+            font-style: oblique;
+        }
+        .child{
+            font-weight: bolder;
+            font-variant: small-caps;
+        }
+        .third{
+            font-weight: lighter;
+        }
+        .box{
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+            text-align: center;
+            /* 줄 간격 */
+            line-height: 250px;
+        }
+        .box .content{
+            font-family: 'Palette Mosaic', cursive;
+            font-size: 2em;
+            /* 글자 간격 */
+            letter-spacing: 10px;
+            /* 단어 간격 */
+            word-spacing: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="font">
+        HELLO HTML
+        <div class="child">
+            hello html
+            <div class="third">
+                hello html 3
+            </div>
+        </div>
+    </div>
+    <span>font size</span>
+    <br/><hr/>
+    <div class="box">
+        <span class="content">Content Space</span><br/>
+        <span class="content">Content Space</span>
+    </div>
+</body>
+</html>

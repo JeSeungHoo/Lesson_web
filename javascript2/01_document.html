@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        let id = document.getElementById("selectId"); // 아직 input이 없음(위에서부터 아래로 해석)
+        console.log(id);
+    </script>
+</head>
+<body>
+    <!-- input type="text" -->
+    <!-- input:text.tagClass#selectId[value=$ tabindex=$]*5+input:button.tagClass#selectId[value='button'] -->
+    <!-- tabindex - tab키를 눌렀을 때 선택되는 순서 -->
+    <input type="text" id="selectId" class="tagClass" value="1" tabindex="1">
+    <input type="text" id="selectId" class="tagClass" value="2" tabindex="3">
+    <input type="text" id="selectId" class="tagClass" value="3" tabindex="2">
+    <input type="text" id="selectId" class="tagClass" value="4" tabindex="4">
+    <input type="text" id="selectId" class="tagClass" value="5" tabindex="5">
+    <input type="button" value="button" class="tagClass" id="selectId">
+    <br/>
+
+    <script>
+     // getElementById - id 값이 selectId인 요소 중 가장 첫 번째 요소를 선택 
+     // getElementsById - 복수 선택(배열)
+        id = document.getElementById(`selectId`);
+        console.log(id);
+        id.value=`최기근`;
+        document.write(`getElementById : ${id.value}<br/>`);
+
+    //  querySelector - css 선택자를 이용하여 가장 먼저 검색되는 한 개의 요소를 가지고 옴 - 
+        let selector = document.querySelector(`.tagClass`);
+        document.write(`querySelector : ${selector.value}<br/>`);
+
+    // getElementsByTagName - 태그이름으로 복수 선택(배열)
+        let tagArray = document.getElementsByTagName(`input`);
+        for(let i=0; i<tagArray.length;i++){
+            document.write(`${i}번째 : ${tagArray[i].value}<br/>`);
+        }
+
+    // getElementsByClassName - 클래스이름으로 복수 선택(배열)
+        let classArray = document.getElementsByClassName(`tagClass`);
+        console.log(classArray);
+
+    // querySelectorAll - css 선택자를 이용하여 검색된 모든 요소(배열)
+        let selectorAll = document.querySelectorAll(`input[type='text']`);
+        console.log(selectorAll);
+    </script>
+</body>
+</html>

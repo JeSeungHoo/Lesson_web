@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        span{
+            display: inline-block;
+        }
+    </style>
+    <script></script>
+</head>
+<body>
+    <h3>마우스 관련 이벤트 리스너</h3>
+    <hr/>
+    <div>
+        마우스 관련 
+        <span onmousedown="down(this);" 
+        onmouseup="up(this);" 
+        onmouseover="over(this);" 
+        onmouseleave="leave(this);" 
+        onwheel="wheel(event,this);">이벤트</span>가 발생합니다.
+    </div>
+
+    <script>
+        let wid = 1; // 테두리 두께
+        function wheel(e,x){
+            if(e.wheelDelta < 0){ // 휠을 아래로
+                wid--;
+                if(wid<0){
+                    wid=0;
+                }
+            }else{
+                wid++;
+            }
+            x.style.borderWidth = wid+"px"; 
+            x.style.borderStyle = `ridge`;
+        }
+        function over(x){
+            x.style.cursor = `pointer`;
+            x.style.borderColor =`violet`;
+        }
+        function leave(x){
+            x.style.borderColor =`lightgray`;
+        }
+        function down(x){
+            x.style.fontStyle=`italic`;
+        }
+        function up(x){
+            x.style.fontStyle=`normal`;
+        }
+    </script>
+</body>
+</html>

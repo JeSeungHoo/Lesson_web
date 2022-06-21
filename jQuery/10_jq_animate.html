@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){
+            $("#box1").css({
+                width : 100,
+                height : 100,
+                backgroundColor : "red"
+            });
+    
+            $("#box1").animate({
+                width : 300,
+                height : 300,
+                opacity : 0.5
+            },2000,function(){
+                //alert("#box1 animate 종료");
+                console.log("#box1 animate 종료");
+            });
+    
+            $("#box2").css({
+                width : 100,
+                height : 100,
+                background : "blue",
+                position : "absolute",
+                top : 200,
+                left : 50
+            }).animate({
+                width : 300,
+                height: 300,
+                opacity : 0.1
+            },1000).delay(500).animate({
+                left : 308,
+                top : 308,
+                opacity : 1
+            },1000);
+    
+            function animateEvent(){
+                $("#box3").css({
+                    width:100,
+                    height:100,
+                    background : "yellow",
+                    position : "absolute",
+                    top : 100,
+                    left : 500
+                }).animate({
+                    width:300,
+                    height:300,
+                    opacity:0.5,
+                    top:308,
+                    left:308
+                },1000).animate({
+                    width:100,
+                    height:100,
+                    opacity:1,
+                    top:100,
+                    left:508
+                },1000);
+            }
+            
+            let anim = setInterval(animateEvent,2000);
+
+            $(`#box3`).click(function(){
+                // [animate1][animate2]
+                // $(this).stop(clearQueue,jumpToEnd);
+                // clearQueue => true = 모든 이벤트 제거, false - 현재 이벤트 제거
+                // jumpToEnd => true = 이벤트의 끝 속성값으로 즉시 전환되면서 종료, false - 현재 상태 그대로 즉시 종료
+                // 기본값 false,false
+                // $(this).stop(false,true);
+                // $(this).stop(false,false);
+                // $(this).stop(true,true);
+                $(this).stop(true,false);
+                clearInterval(anim);
+            });
+    
+        });
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>

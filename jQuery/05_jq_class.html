@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        .div{
+            border: 1px solid black;
+        }
+        .warning{
+            color: white;
+            background-color: red;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <div id="box" class="div">
+        <p>Hello!!!</p>
+    </div>
+    <button id="add">class 속성 값 추가</button>
+    <button id="remove">class 속성 값 제거</button>
+    <button id="toggle">class 속성 값 토글</button>
+
+    <script>
+        $(`#add`).click(function(){
+            $(`#box`).addClass(`warning`);
+        });
+        $(`#remove`).click(function(){
+            $(`#box`).removeClass(`warning`);
+        });
+        $(`#toggle`).click(function(){
+            $(`#box`).toggleClass(`div`);
+        });
+    </script>
+</body>
+</html>

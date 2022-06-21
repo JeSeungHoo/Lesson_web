@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        /*
+            box container에 적용되는 속성
+            flex-direction  중심축 지정
+            flex-wrap       줄바꿈 설정
+            flex-flow       direction, wrap; 동시 설정
+            justify-content 수평정렬
+            align-items     수직정렬
+            align-content   flew-wrap:wrap; 상태일 때 자동줄바꿈된 아이템 사이의 간격
+            
+            각각의 아이템에 적용할 수 있는 속성
+            flex-shrink     부모에서 벗어난 크기만큼 축소(기본값 1)
+            flex-grow       지정된 비율에 따라 부모 속성만큼 크기를 채움(기본값 0)
+            flex-basis      부모 컨테이너가 flex 컨테이너일 경우 중심축 방향의 기본 크기 지정
+            flex            shrink grow basis; 동시 설정
+            order           양수 음수에 따라 아이템의 위치 변경
+            align-self      메인 축과 반대 방향 정렬을 아이템별로 지정
+        */
+        *, html, body{
+            margin: 0; padding:0; height:100%;
+        }
+        .wrap{
+            margin:0 auto; width:600px; background:gray;
+            display:flex;
+            flex-wrap:nowrap; flex-direction:row; align-items:stretch;
+        }
+        .item{
+            flex-basis:300px;
+            height: 200px;
+        }
+        .item01{background: #00ff00; flex-shrink:2;}
+        .item02{background: yellow;flex-shrink:1; order:1;}
+        .item03{background: purple;flex-shrink:2; order:-1;}
+        .item04{background: #0000ff;flex-shrink:1; align-self:flex-end;}
+        .item05{background: #ff0000;flex-shrink:2;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item item01">01</div>
+        <div class="item item02">02</div>
+        <div class="item item03">03</div>
+        <div class="item item04">04</div>
+        <div class="item item05">05</div>
+    </div>
+</body>
+</html>

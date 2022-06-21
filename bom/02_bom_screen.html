@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>window.screen : 사용자 화면에 대한 정보</title>
+    <script>
+    window.onload = function(){
+        let widthWin = screen.availWidth;
+        let heightWin = screen.availHeight;  // 작업표시줄 빼고~~
+            console.log(`사용가능한 화면 넓이 : ${widthWin}x${heightWin}`);
+        let width = screen.width;
+        let height = screen.height;
+            console.log(`화면 넓이 : ${width}x${height}`);
+        width = document.body.clientWidth;
+        height = document.body.clientHeight;
+          console.log(`문서 안쪽의 넓이 : ${width}x${height}`);
+    }
+        let i = 0;
+        window.onscroll = function(){
+            let wy = window.scrollY; 
+            console.log(`y축 스크롤 시작 좌표 ${wy}`);
+            let dh = document.body.clientHeight;
+            console.log(`문서의 전체 높이 ${dh}`);
+            let wh = window.screen.height;
+            console.log(`브라우저가 출력할 수 있는 최대 높이 ${wh}`);
+            let scrollHeight = wy + wh;
+            console.log(`scroll 위치 ${scrollHeight}`);
+            if(scrollHeight >= dh){
+                console.log(`body에 추가`);
+                let elem = document.createElement(`div`);
+                elem.style.height = `1600px`;
+                elem.style.border = `1px solid black`;
+                elem.innerHTML = `<h1>${i}</h1>`;
+                document.body.appendChild(elem);
+                i++;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="height:1600px;width:100%;border:1px solid red;"></div>
+</body>
+</html>

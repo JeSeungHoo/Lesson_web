@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+    // 함수(function) - 하나의 특별한 목적을 가진 작업을 수행하기 위해 독립적으로 설계된 코드의 집합
+    // 함수 이름 - 함수를 호출하기 위해 명시된 식별자
+    // 매개변수(parameter) - 함수 호출 시 전달되는 인자(인수)의 값을 저장할 변수
+    // 함수 블록(바디) - 함수의 고유 기능을 수행하는 명령문의 집합
+    // 반환문(return문) - 함수가 모든 작업을 수행하고 반환하는 데이터
+
+        print(); // 함수 호출
+
+        function print(){ // function은 호이스팅된다!
+            console.log(`print 함수 호출`);
+        }
+
+        function printName(name){
+            document.write(`이름은 ${name}입니다.`);
+        }
+        printName(`최기근`);
+        printName(`이나영`);
+
+        function sum(x, y){
+            return x + y;
+            console.log(`sum 종료`); // return 뒤의 작업은 실행하지 않는다.
+        }
+
+        printName( sum(10,30) );
+
+    // 기명함수(named function)
+        // nFunction(); // var nFunction이라는 선언부는 호이스팅되지만 함수라고 초기화되지는 않았기에, 함수로 인지 x
+        var nFunction = function test(){
+            alert(`test 호출`);
+        }
+        nFunction(); // test(); 오류
+
+    // 익명함수(anonymous Function)
+        var anonyFunc = function (){
+            alert(`익명 함수 호출`);
+        }
+        document.write(`typeof : ${typeof(anonyFunc)}`);
+        anonyFunc();
+
+    // 선언적함수
+        function call(callBackParam){
+            for(let i = 1; i <= 5; i ++){
+                callBackParam(i);
+            }
+        }
+        
+        var func = function(i){
+            console.log(`func : ${i}`);
+        }
+        func(10);
+        call(func);
+        call(function(x){
+            alert(x);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 onclick="alert(`하이`);">눌러 봐~</h1>
+</body>
+</html>

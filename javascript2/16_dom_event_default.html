@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        function query(){
+            let answer = confirm(`네이버로 이동하시겠습니까?`);
+            return answer;
+        }
+        function noAction(e){
+            e.preventDefault(); // 이벤트가 가진 기본 이벤트를 무시한다.
+        }
+    </script>
+</head>
+<body>
+    <a href="https://www.naver.com" onclick="return query();">네이버로 이동할지 물어봄</a> 
+    <!-- return은 함수 내에서 써라 === 좋지 않은 방법 -->
+    <form action="https://www.naver.com" method="get" name="myForm">
+        <input type="checkbox" name="eat" value="빵"/>빵<br/>
+        <input type="checkbox" name="eat" value="술" onclick="noAction(event);"/>술<br/>
+        <!-- onclick="noAction(event);" -->
+        <input type="submit" value="전송"/>
+        <input type="button" value="진짜 전송" id="btn"/>
+    </form>
+
+    <script>
+        // name 속성이 붙은 form 요소는 문서 객체의 속성으로 바로 인식됨
+        document.myForm.onsubmit = function (){
+            console.log(`submit 발생!`);
+            return false;
+        }
+        let btn = document.getElementById(`btn`);
+        btn.onclick = function(){
+            document.myForm.submit();
+        }
+    </script>
+</body>
+</html>

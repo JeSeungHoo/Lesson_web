@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>flexxxxxxxxxxxxxxxxxxx!</title>
+    <style>
+        *{
+            height: 100%;
+        }
+        .wrapper{
+            height: 100%; background-color: #cccccc;
+            display: flex;
+            /* 
+            어떤 축을 기준으로 아이템을 배치할 지 결정하는 속성 
+            기본값:row, column, row-reverse, column-reverse*/
+            flex-direction: row;
+            /* 
+            너비나 높이에 따라 크기를 압축할 지, 줄바꿈할 지 결정하는 속성
+            기본값:nowrap[압축], wrap[줄바꿈], wrap-reverse */
+            flex-wrap: wrap;
+            /* 수평정렬 - 축에 따라 달라진다 */
+            justify-content: center;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: space-around; /* 동일간격여백+양끝1/2여백 */
+            justify-content: space-between;/* 동일간격여백*/
+            justify-content: space-evenly; /* 동일간격여백+양끝여백*/
+            /* 수직정렬 - 축에 따라 달라진다 */
+            align-items: stretch; /*기본값:flex 요소의 높이가 flex 컨테이너 높이와 같게 변경된 뒤 연이어 배치*/
+            align-items: flex-end;/*컨네이너 아래쪽에 배치*/
+            align-items: flex-start; /*컨테이너 위쪽에 배치*/
+            align-items: center;/*중앙*/
+            align-items: baseline;/*컨테이너 기준선에 배치*/
+        }
+        .item{
+            width: 80px;
+            height: 80px;
+        }
+        .item01{background-color: lightblue;}
+        .item02{background-color: lightcoral;}
+        .item03{background-color: lightcyan;}
+        .item04{background-color: lightgoldenrodyellow;}
+        .item05{background-color: lightskyblue;}
+        .item06{background-color: lightgreen;}
+        .item07{background-color: lightsteelblue;}
+        .item08{background-color: lightpink;}
+        .item09{background-color: lightsalmon;}
+        .item10{background-color: lightseagreen;}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item item01">01</div>
+        <div class="item item02">02</div>
+        <div class="item item03">03</div>
+        <div class="item item04">04</div>
+        <div class="item item05">05</div>
+        <div class="item item06">06</div>
+        <div class="item item07">07</div>
+        <div class="item item08">08</div>
+        <div class="item item09">09</div>
+        <div class="item item10">10</div>
+    </div>
+</body>
+</html>

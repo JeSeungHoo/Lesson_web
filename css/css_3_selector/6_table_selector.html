@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>table child selector</title>
+    <style>
+        table > tr > td{
+            color: blue;
+        }
+        /* 
+        문제: 스타일 적용이 되지 않는다 
+        원인: 브라우저에서 자동으로 tbody를 생성하기 때문이다
+        해답: tbody를 넣어 스타일 적용한다
+        */
+        table > tbody > tr > td{
+            color: blue;
+        }
+        table th{
+            color: red;
+        }
+        table td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- table>(tr>td*3)*2 -->
+    <table border="1">
+        <tr>
+            <th>좋아하는 과일</th>
+            <th>싫어하는 과일</th>
+            <th>기타</th>
+        </tr>
+        <tr>
+            <td>오렌지</td>
+            <td>포도</td>
+            <td>사과</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        // numeric operatiors
+        console.log(2+3); // add
+        console.log(2-3); // substract
+        console.log(2/3); // divide
+        console.log(2*3); // multiply
+        console.log(2%3); // rest
+        console.log(2**3); // exponentition 2의 3승
+        console.log(2/0); // infinity
+
+        let str = 'My ' + 'Study' ; // 문자열에서 사용할 수 있는 유일한 산술연산자 + --- 문자열과 문자열을 이어준다.
+        console.log(str);
+
+        let number = 2;
+        let number2 = 3;
+        let result = number + number2;
+        console.log("결과값은 : " + result);
+        str = `template string : ${result}`; // 백틱 `
+        console.log(str);
+
+        str = `template string \n'''''''\t''''""\n`;
+        str = "template string \n'''''''\t''''\"\"\n";
+        console.log(str);
+
+        console.log("-----------------------------------------------");
+
+        // 비교연산자 좌변과 우변의 값의 크기를 비교
+        result = number < number2; // 좌변이 우변보다 작으면 참 - less then 미만
+        console.log(result);
+        result = number <= number2; // 우변보다 작거나 같으면 참 - 이하
+        console.log(result);
+        result = number >= number2; // 좌변이 우변보다 크거나 같으면 참 - 이상
+        console.log(result);
+        result = number > number2; // 좌변이 우변보다 크면참 - 초과
+        console.log(result);
+
+        // 동등 비교 연산자
+        // !=불일치하면 참, ==일치하면 참, ===타입까지 일치하면 참, !==하나라도 불일치하면 참
+        const strAge ='40'; // 문자열 40
+        const numAge =40; // 숫자 40
+        // typeof(변수) 변수의 데이터 타입을 출력
+        console.log(typeof(strAge));
+        console.log(typeof(numAge));
+        
+        result = strAge == numAge; // 일치하면 참
+        console.log(result); // 40=40이므로 참
+        result = strAge === numAge; // 타입까지 일치하면 참
+        console.log(result); // 40=40이지만 문자열!=숫자이므로 거짓
+
+        // 논리 비교 연산자
+        // ! 논리 부정
+        // || 논리 합(or연산자)
+        // && 논리 곱(and연산자)
+        console.log("-----------------------------------------------");
+        let value1 = false;
+        const value2 = 4 < 2; // =false
+        result = value1 || value2;
+        console.log(result);
+        result = !value1 && value2;
+        console.log(result);
+        result = !value1 && !value2;
+        console.log(result);
+        // 배타 여산자
+        // 두 논리가 일치하지 않을 때만 참(=1)
+        result = value1 ^ value2;
+        console.log(result);
+        result = value1 ^ !value2;
+        console.log(result);
+
+        // 복합 대입 연산자
+        let x = 3;
+        let y = 6;
+        x = x + y;
+        console.log(x);
+        x+=y; // 똑같다 x = x + y 모든 산술연산자 적용 가능 + - * / %
+        console.log(x);
+        x=x-y;
+        x-=y;
+        x=x*y;
+        x*=y;
+        x=x/y;
+        x/=y;
+        x=x%y;
+        x%=y;
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

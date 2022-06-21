@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        let child;
+        function openChild(){
+            child = window.open(`07_bom_window_child.html`,`_blank`,`width=500,height=350,top=100,left=100`);
+        }
+        function setChild(){
+            let input = child.document.getElementById(`inputData`)
+            let send = document.getElementById(`sendData`);
+            input.value = send.value;
+        }
+        console.log(opener);
+    </script>
+</head>
+<body>
+    <h1>부모창</h1>
+    <hr/>
+    <input type="button" value="자식 창 열기" onclick="openChild();"/>
+    <input type="text" id="sendData"/>
+    <input type="button" value="전달" onclick="setChild();"/>
+</body>
+</html>

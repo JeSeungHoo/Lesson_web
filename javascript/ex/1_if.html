@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style></style>
+    <script>
+        // 사용자에게 특정 값을 입력 받아
+        // 입력 받은 값을 반환하는 prompt()
+        let input = prompt("숫자를 입력해주세요.");
+        if(input % 3 == 0){
+            document.write(input+"은(는) 3의 배수입니다.");
+        }else{
+            document.write(input+"은(는) 3의 배수가 아닙니다.");
+        }
+
+    // 반복 수행
+    // 사용자가 수치를 표현할 수 없는 값을 입력하면 종료 -> 
+    // 언제 종료될 지 모름 -> while 사용
+        while(true){
+            input = prompt("숫자를 입력해주세요.");
+            let answer ="숫자가 아닙니다."; 
+    // 탈출 경우를 먼저 작성하는 것이 좋음
+        // 그냥 취소할 때
+            if(input == null){        
+                alert(answer);
+                break;
+            }
+        // 아무것도 입력 받지 않았을 때 + 수치가 아닐 때
+            input = input.trim();
+            // trim()=텍스트 좌우 공백(스페이스바)을 없애줌
+            // ex) "__a__" -> "a","a____" -> "a", "_a_b_"-> "a_b"
+            if(input == "" || isNaN(input)){  
+                alert(answer);
+                break;
+            }
+            
+            if(input % 3 == 0){
+                answer=input+"은(는) 3의 배수입니다.";
+            }else{
+                answer=input+"은(는) 3의 배수가 아닙니다.";
+            }
+            alert(answer);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

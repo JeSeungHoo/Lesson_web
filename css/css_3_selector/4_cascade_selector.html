@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        h1{
+            color: red;
+        }
+        /* 
+        전체 선택자 *는 최하위 우선순위
+        우선순위
+        inline > id > class > type > *
+        */
+        *{
+            color: greenyellow;
+        }
+        #bg{
+            background-color: skyblue;
+        }
+        #color{
+            color: blue;
+        }
+        .size{
+            font-size: 50px;
+        }
+        .color{
+            color: pink;
+        }
+        h2{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>TYPE 선택자</h1>
+    <!-- h2{선택자 적용}*4 -->
+    <h2 id="bg">선택자 적용</h2>
+    <h2 id="color">선택자 적용</h2>
+    <!-- 
+        id는 하나의 값만 가질 수 있음,  
+        class는 여러 값을 가질 수 있음
+        => 대부분 스타일은 class로 적용
+    -->
+    <h2 id="color bg">선택자 적용</h2>
+    <h2 id="color" class="size color">선택자 적용</h2>
+    <!-- id의 우선순위가 높기 때문에 컬러가 blue로 적용됨 -->
+    <h2 style="color:black;" id="color" class="size color">선택자 적용</h2>
+    <!-- inline의 우선순위가 높기 때문에 컬러가 black으로 적용됨 -->
+</body>
+</html>

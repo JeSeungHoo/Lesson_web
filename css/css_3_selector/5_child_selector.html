@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        /* 자손선택자의 우선순위는 경로가 구체적일수록 높음 */
+        .header #nav h1{
+            background-color: blue;
+        }
+        .header h1{
+            background-color: skyblue;
+            color: red;
+        }
+        .header > h1{
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- div.header or div#header-->
+    <div class="header">
+        <h1>lorem ipsum</h1>
+        <div id="nav">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div id="dummy">
+        <h1>DUMMY</h1>
+    </div>
+</body>
+</html>
